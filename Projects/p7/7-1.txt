@@ -1,0 +1,11 @@
+A) The total of memory reads is, 4 x 16 x 16 because it writes to memory 4 times for 16 times
+   it goes through the inner loop and another 16 times for the outer loop, thus the total
+   number of memory reads is 1024.
+
+B) The total of memory reads that miss in the cache is, (1/8) * 1024 because for every
+   7 hits we get 1 miss (7:1), so can multiply that with the total number of memory reads.
+   Thus the total number of memory reads that is missed is 128.
+
+C) Given that we know the total number of writes and the number of missed ones as well. Then
+   the miss rate is given by: (number of misses) / (number of total writes). Therefore we
+   have the miss rate as (128/1024) * 100 = %12.5.

@@ -1,0 +1,13 @@
+Implementing a new iaddq instruction to Y86-64 architecture.
+
+icode:ifun <- M1[PC]	---> Fetching the bytes of the instruction code and function
+rA:rB <- M1[PC + 1]	---> Fetching a register specifier byte with both register operands
+valC <- M8[PC + 2]	---> Fetching a 4 byte constant word
+valP <- PC + 10		---> Computing the address of the instruction
+
+R[rB] <- valE		---> execute the arithmetic +
+Set CC
+
+R[rB] <- valE		---> write back the value
+
+PC <- valP		---> PC update
